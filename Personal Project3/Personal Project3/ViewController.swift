@@ -16,19 +16,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var duedate: UIDatePicker!
     
     @IBAction func hello(sender: AnyObject) {
-        println("startdate = \(startdate.date)")
-        println("duedate = \(duedate.date)")
+        print("startdate = \(startdate.date)")
+        print("duedate = \(duedate.date)")
         var seconds:Int = Int(duedate.date.timeIntervalSinceDate(startdate.date))
         var minutes:Int = seconds/60
         seconds = seconds%60
         var hours:Int = minutes/60
         minutes = minutes%60
-        var days:Int = hours/24
+        let days:Int = hours/24
         hours = hours%24
-        println("days = \(days)")
-        println("hours = \(hours)")
-        println("minutes = \(minutes)")
-        println("seconds = \(seconds)")
+        print("days = \(days)")
+        print("hours = \(hours)")
+        print("minutes = \(minutes)")
+        print("seconds = \(seconds)")
         var datestring = String(days) + ":"
         datestring = datestring + String(hours)
         datestring = datestring + ":"
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         datestring = datestring + ":"
         datestring = datestring + String(seconds)
         countdown.text = datestring
-        println(textField.text)
+        print(textField.text)
         
     }
     
@@ -53,9 +53,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segueTest") {
             var DestViewController : Projects = segue.destinationViewController as! Projects
-            var newproject = Project(name: textField.text, startDate: startdate.date, endDate: duedate.date)
+            let newproject = Project(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
             projectlist.append (newproject)
-            var svc = segue.destinationViewController as! Projects;
+            let svc = segue.destinationViewController as! Projects;
             svc.toPass = textField.text
         }
     }

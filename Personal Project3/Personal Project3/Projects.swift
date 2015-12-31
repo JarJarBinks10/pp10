@@ -27,11 +27,11 @@ class Projects: UIViewController {
         super.viewDidLoad()
         labelPassedData.text = toPass
         
-        println("List of all projects:")
+        print("List of all projects:")
         for proj in projectlist {
-            println("name=\(proj.name)")
-            println("startdate=\(proj.startDate)")
-            println("enddate=\(proj.endDate)")
+            print("name=\(proj.name)")
+            print("startdate=\(proj.startDate)")
+            print("enddate=\(proj.endDate)")
         }
         
         // Do any additional setup after loading the view.

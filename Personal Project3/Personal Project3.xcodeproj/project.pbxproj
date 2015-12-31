@@ -15,6 +15,8 @@
 		1E7C0CD61BA5D231007E7290 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C0CD41BA5D231007E7290 /* LaunchScreen.xib */; };
 		1E7C0D8E1BA5FAF2007E7290 /* Load Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */; };
 		1E82E2BB1C2C48C000738153 /* CellViewTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E2BA1C2C48C000738153 /* CellViewTableTableViewCell.swift */; };
+		1ECEAF6C1C35A1360009EEEF /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */; };
+		1ECEAF6D1C35A1360009EEEF /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		1E7C0CE01BA5D231007E7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Load Project.swift"; path = "Personal Project3/Load Project.swift"; sourceTree = "<group>"; };
 		1E82E2BA1C2C48C000738153 /* CellViewTableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewTableTableViewCell.swift; sourceTree = "<group>"; };
+		1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 				1E7C0CD21BA5D231007E7290 /* Images.xcassets */,
 				1E7C0CD41BA5D231007E7290 /* LaunchScreen.xib */,
 				1E7C0CC91BA5D231007E7290 /* Supporting Files */,
+				1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */,
 			);
 			path = "Personal Project3";
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 		1E7C0CBE1BA5D231007E7290 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Nick Patel";
 				TargetAttributes = {
@@ -223,6 +228,7 @@
 				1E7C0CCC1BA5D231007E7290 /* AppDelegate.swift in Sources */,
 				1E7C0D8E1BA5FAF2007E7290 /* Load Project.swift in Sources */,
 				1E69EB201BA6033E006EFEDC /* Projects.swift in Sources */,
+				1ECEAF6C1C35A1360009EEEF /* ProjectInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECEAF6D1C35A1360009EEEF /* ProjectInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -381,6 +389,7 @@
 				INFOPLIST_FILE = "Personal Project3Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Personal Project3.app/Personal Project3";
 			};
 			name = Debug;
@@ -389,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
