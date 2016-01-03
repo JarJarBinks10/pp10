@@ -10,20 +10,20 @@ import UIKit
 
 class ProjectInfo {
 
-  // MARK: Properties
-  var name: String
-  var startDate: NSDate
-  var endDate: NSDate
+    // MARK: Properties
+    var name: String
+    var startDate: NSDate
+    var endDate: NSDate
 
-  // MARK: Initialization
-  init?(name: String, startDate: NSDate, endDate: NSDate) {
-    self.name = name
-    self.startDate = startDate
-    self.endDate = endDate
-    // Initialization should fail if there is no name or if endDate is before startDate.
-    if name.isEmpty || startDate.compare(endDate) != .OrderedAscending {
-      return nil
+    // MARK: Initialization
+    init?(name: String, startDate: NSDate, endDate: NSDate) {
+        self.name = name
+        self.startDate = startDate
+        self.endDate = endDate
+        // Initialization should fail if there is no name or if endDate is before startDate.
+        if name.isEmpty || startDate.compare(endDate) != .OrderedAscending {
+            return nil
+        }
     }
-  }
 
 }
