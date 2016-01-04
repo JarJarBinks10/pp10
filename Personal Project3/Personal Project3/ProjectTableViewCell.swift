@@ -1,5 +1,5 @@
 //
-//  CellViewTableTableViewCell.swift
+//  ProjectTableViewCell.swift
 //  Personal Project3
 //
 //  Created by Nick Patel on 2015-12-24.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CellViewTableTableViewCell: UITableViewCell {
+class ProjectTableViewCell: UITableViewCell {
 
     // MARK: Properties
-    
+
     @IBOutlet weak var ProjectCell: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
