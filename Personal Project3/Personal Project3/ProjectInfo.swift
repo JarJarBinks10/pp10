@@ -17,6 +17,7 @@ class ProjectInfo {
 
     // MARK: Initialization
     init?(name: String, startDate: NSDate, endDate: NSDate) {
+        // Initialize stored properties.
         self.name = name
         self.startDate = startDate
         self.endDate = endDate
