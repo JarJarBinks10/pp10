@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-Df-k5C">
-                                <rect key="frame" x="0.0" y="67" width="600" height="533"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProjectTableViewCell" rowHeight="60" id="Kxu-Nm-jm1" customClass="ProjectTableViewCell" customModule="Personal_Project3">
@@ -88,7 +88,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9By-Hc-Hrm">
-                                <rect key="frame" x="20" y="28" width="560" height="31"/>
+                                <rect key="frame" x="20" y="20" width="560" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,7 +122,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="bOH-Vb-TGj">
-                                <rect key="frame" x="0.0" y="86" width="600" height="103"/>
+                                <rect key="frame" x="0.0" y="22" width="600" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOH-Vb-TGj" id="8A8-cJ-aZM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="102.5"/>
@@ -142,7 +142,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="YsN-wj-Tlr">
-                                <rect key="frame" x="0.0" y="189" width="600" height="103"/>
+                                <rect key="frame" x="0.0" y="125" width="600" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YsN-wj-Tlr" id="Plv-eY-rkD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="102.5"/>
@@ -162,7 +162,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="HyC-kV-hXA">
-                                <rect key="frame" x="0.0" y="292" width="600" height="103"/>
+                                <rect key="frame" x="0.0" y="228" width="600" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HyC-kV-hXA" id="HuQ-dm-cqq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="102.5"/>
@@ -182,7 +182,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="A2j-QO-Oej">
-                                <rect key="frame" x="0.0" y="395" width="600" height="102"/>
+                                <rect key="frame" x="0.0" y="331" width="600" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A2j-QO-Oej" id="e1i-zT-hX7">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="101.5"/>
@@ -202,7 +202,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="204" id="E2E-JV-Z6a">
-                                <rect key="frame" x="0.0" y="497" width="600" height="204"/>
+                                <rect key="frame" x="0.0" y="433" width="600" height="204"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E2E-JV-Z6a" id="Obg-P8-67L">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="203.5"/>
