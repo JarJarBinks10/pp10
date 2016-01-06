@@ -40,7 +40,7 @@
 		1E7C0CD51BA5D231007E7290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1E7C0CDB1BA5D231007E7290 /* Personal Project3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personal Project3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C0CE01BA5D231007E7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Load Project.swift"; path = "Personal Project3/Load Project.swift"; sourceTree = "<group>"; };
+		1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Load Project.swift"; sourceTree = "<group>"; };
 		1E82E2BA1C2C48C000738153 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; };
 		1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfo.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
@@ -66,7 +66,6 @@
 		1E7C0CBD1BA5D231007E7290 = {
 			isa = PBXGroup;
 			children = (
-				1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */,
 				1E7C0CC81BA5D231007E7290 /* Personal Project3 */,
 				1E7C0CDE1BA5D231007E7290 /* Personal Project3Tests */,
 				1E7C0CC71BA5D231007E7290 /* Products */,
@@ -85,6 +84,7 @@
 		1E7C0CC81BA5D231007E7290 /* Personal Project3 */ = {
 			isa = PBXGroup;
 			children = (
+				1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */,
 				1E7C0CCB1BA5D231007E7290 /* AppDelegate.swift */,
 				1E7C0CCD1BA5D231007E7290 /* ViewController.swift */,
 				1E69EB1F1BA6033E006EFEDC /* Projects.swift */,
