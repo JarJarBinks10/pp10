@@ -12,7 +12,10 @@ class ProjectTableViewCell: UITableViewCell {
 
     // MARK: Properties
 
-    @IBOutlet weak var ProjectCell: UIView!
+  @IBOutlet weak var projectLabel: UILabel!
+  
+  @IBOutlet weak var projectTime: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
