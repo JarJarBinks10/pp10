@@ -52,8 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segueTest") {
-            let newproject = Project(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
-            projectlist.append (newproject)
+            //let newproject = ProjectInfo(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
+            //projectlist.append (newproject)
             let svc = segue.destinationViewController as! Projects;
             svc.toPass = textField.text
         }
