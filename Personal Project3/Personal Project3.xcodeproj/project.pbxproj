@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E69EB201BA6033E006EFEDC /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E69EB1F1BA6033E006EFEDC /* Projects.swift */; };
+		1E69EB201BA6033E006EFEDC /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E69EB1F1BA6033E006EFEDC /* ProjectTableViewController.swift */; };
 		1E7C0CCC1BA5D231007E7290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C0CCB1BA5D231007E7290 /* AppDelegate.swift */; };
 		1E7C0CCE1BA5D231007E7290 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C0CCD1BA5D231007E7290 /* ViewController.swift */; };
 		1E7C0CD11BA5D231007E7290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C0CCF1BA5D231007E7290 /* Main.storyboard */; };
@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E69EB1F1BA6033E006EFEDC /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; tabWidth = 4; };
+		1E69EB1F1BA6033E006EFEDC /* ProjectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		1E7C0CC61BA5D231007E7290 /* Personal Project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Project3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C0CCA1BA5D231007E7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C0CCB1BA5D231007E7290 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */,
 				1E7C0CCB1BA5D231007E7290 /* AppDelegate.swift */,
 				1E7C0CCD1BA5D231007E7290 /* ViewController.swift */,
-				1E69EB1F1BA6033E006EFEDC /* Projects.swift */,
+				1E69EB1F1BA6033E006EFEDC /* ProjectTableViewController.swift */,
 				1E7C0CCF1BA5D231007E7290 /* Main.storyboard */,
 				1E82E2BA1C2C48C000738153 /* ProjectTableViewCell.swift */,
 				1E7C0CD21BA5D231007E7290 /* Images.xcassets */,
@@ -227,7 +227,7 @@
 				1E7C0CCE1BA5D231007E7290 /* ViewController.swift in Sources */,
 				1E7C0CCC1BA5D231007E7290 /* AppDelegate.swift in Sources */,
 				1E7C0D8E1BA5FAF2007E7290 /* Load Project.swift in Sources */,
-				1E69EB201BA6033E006EFEDC /* Projects.swift in Sources */,
+				1E69EB201BA6033E006EFEDC /* ProjectTableViewController.swift in Sources */,
 				1ECEAF6C1C35A1360009EEEF /* ProjectInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
