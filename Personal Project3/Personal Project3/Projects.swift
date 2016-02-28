@@ -26,6 +26,10 @@ class Projects: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Load the sample data.
+        loadSampleProjects()
+
         labelPassedData.text = toPass
         
         print("List of all projects:")
