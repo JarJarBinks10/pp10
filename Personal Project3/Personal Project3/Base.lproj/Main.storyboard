@@ -47,7 +47,7 @@
         <!--Projects-->
         <scene sceneID="gYT-NX-Zye">
             <objects>
-                <viewController id="QNs-MJ-a1r" customClass="Projects" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QNs-MJ-a1r" customClass="UITableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6yD-uq-sfc"/>
                         <viewControllerLayoutGuide type="bottom" id="tnf-Cb-QyJ"/>
@@ -111,7 +111,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN8-Qk-841" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-901"/>
+            <point key="canvasLocation" x="884" y="-815"/>
+        </scene>
+        <!--Project Tableview Controller-->
+        <scene sceneID="u1d-Ab-QMG">
+            <objects>
+                <tableViewController id="Bno-Ff-SsQ" customClass="ProjectTableviewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRc-EO-uDh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectTableViewCell" id="kRg-qx-bn6" customClass="ProjectTableViewCell" customModule="Personal_Project3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRg-qx-bn6" id="TBp-mq-Lry">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2f-U5-yS5">
+                                            <rect key="frame" x="8" y="0.0" width="240" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efL-C2-onF" userLabel="Remaining Time Label">
+                                            <rect key="frame" x="256" y="0.0" width="240" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="O2f-U5-yS5" id="mqT-S8-tVq"/>
+                                    <outlet property="remainingTimeLable" destination="efL-C2-onF" id="5Kb-uZ-Elb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Bno-Ff-SsQ" id="New-4E-4cg"/>
+                            <outlet property="delegate" destination="Bno-Ff-SsQ" id="3d7-A5-o2X"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUj-dL-W2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-292"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="q1C-5y-RYL">
@@ -333,7 +379,7 @@
         <!--Project Set-Up-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProjectViewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -407,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="-901"/>
+            <point key="canvasLocation" x="-31" y="-895"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eHo-CV-uJR">

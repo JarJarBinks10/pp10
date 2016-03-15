@@ -14,26 +14,44 @@ import UIKit
 //    var endDate: NSDate
 //}
 
-class Projects: UIViewController {
+class ProjectTableviewController: UITableViewController {
 
 
-// MARK: Properties
-
-    var projectlist = [ProjectInfo]()
-    @IBOutlet weak var labelPassedData: UILabel!
+    // MARK: Properties
+    var projects = [ProjectInfo]()
+    //@IBOutlet weak var labelPassedData: UILabel!
     
     var toPass: String!
-    
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return projects.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "ProjectTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ProjectTableViewCell
+        // Fetches the appropriate meal for the data source layout.
+        let project = projects[indexPath.row]
+        cell.nameLabel.text = project.name
+        cell.remainingTimeLabel.text = String(format: "%f", project.endDate.timeIntervalSinceNow / 60 / 60 / 24)
+        return cell
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Load the sample data.
         loadSampleProjects()
 
-        labelPassedData.text = toPass
+        //labelPassedData.text = toPass
         
         print("List of all projects:")
-        for proj in projectlist {
+        for proj in projects {
             print("name=\(proj.name)")
             print("startdate=\(proj.startDate)")
             print("enddate=\(proj.endDate)")
@@ -54,7 +72,7 @@ class Projects: UIViewController {
         let startdate3 = dateformatter.dateFromString("2016-06-01")!
         let enddate3 = dateformatter.dateFromString("2016-06-05")!
         let project3 = ProjectInfo (name: "Watch all superhero movies.", startDate: startdate3, endDate: enddate3)!
-        projectlist += [project1, project2, project3]
+        projects += [project1, project2, project3]
     }
 
     override func didReceiveMemoryWarning() {

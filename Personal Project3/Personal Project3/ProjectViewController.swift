@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProjectViewController.swift
 //  Personal Project3
 //
 //  Created by Nick Patel on 2015-09-13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ProjectViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var countdown: UILabel!
@@ -54,8 +54,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if (segue.identifier == "segueTest") {
             //let newproject = ProjectInfo(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
             //projectlist.append (newproject)
-            let svc = segue.destinationViewController as! Projects;
-            svc.toPass = textField.text
+            //let svc = segue.destinationViewController as! ProjectTableviewController
+            //svc.name = textField.text!
+            //svc.startDate = startdate.date
+            //svc.endDate = duedate.date
         }
     }
     

@@ -12,9 +12,8 @@ class ProjectTableViewCell: UITableViewCell {
 
     // MARK: Properties
 
-  @IBOutlet weak var projectLabel: UILabel!
-  
-  @IBOutlet weak var projectTime: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var remainingTimeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
