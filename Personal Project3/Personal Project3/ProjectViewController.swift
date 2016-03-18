@@ -14,8 +14,10 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var startdate: UIDatePicker!
     @IBOutlet weak var duedate: UIDatePicker!
-    
-    @IBAction func hello(sender: AnyObject) {
+
+    var projectInfo: ProjectInfo?
+
+    @IBAction func calculateProjectDuration(sender: AnyObject) {
         print("startdate = \(startdate.date)")
         print("duedate = \(duedate.date)")
         var seconds:Int = Int(duedate.date.timeIntervalSinceDate(startdate.date))
