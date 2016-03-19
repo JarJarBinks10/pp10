@@ -11,7 +11,6 @@ import UIKit
 class ProjectTableViewCell: UITableViewCell {
 
     // MARK: Properties
-
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var remainingTimeLabel: UILabel!
 
@@ -22,7 +21,6 @@ class ProjectTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

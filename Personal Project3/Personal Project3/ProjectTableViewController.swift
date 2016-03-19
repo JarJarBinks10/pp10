@@ -8,14 +8,7 @@
 
 import UIKit
 
-//struct Project {
-//    var name: String
-//    var startDate: NSDate
-//    var endDate: NSDate
-//}
-
 class ProjectTableviewController: UITableViewController {
-
 
     // MARK: Properties
     var projects = [ProjectInfo]()
@@ -44,7 +37,7 @@ class ProjectTableviewController: UITableViewController {
 
         // Load the sample data.
         loadSampleProjects()
-        
+
        // Do any additional setup after loading the view.
     }
 
@@ -77,15 +70,5 @@ class ProjectTableviewController: UITableViewController {
             tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

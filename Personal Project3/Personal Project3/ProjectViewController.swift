@@ -9,7 +9,7 @@
 import UIKit
 
 class ProjectViewController: UIViewController, UITextFieldDelegate {
-    
+
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var startdate: UIDatePicker!
@@ -34,7 +34,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         datestring = datestring + String(seconds)
         countdown.text = datestring
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,21 +52,12 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
             let startDate = startdate.date
             let endDate = duedate.date
             projectInfo = ProjectInfo(name: name, startDate: startDate, endDate: endDate)
-            //let newproject = ProjectInfo(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
-            //projectlist.append (newproject)
-            //let svc = segue.destinationViewController as! ProjectTableviewController
-            //svc.name = textField.text!
-            //svc.startDate = startdate.date
-            //svc.endDate = duedate.date
         }
     }
 
     // Text Feild Delegate
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
-        
         return true;
     }
 
