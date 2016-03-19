@@ -62,8 +62,7 @@ class ProjectTableviewController: UITableViewController {
     }
 
     @IBAction func unwindToProjectList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? ProjectViewController {
-            let projectInfo: ProjectInfo = sourceViewController.projectInfo!
+        if let sourceViewController = sender.sourceViewController as? ProjectViewController, projectInfo = sourceViewController.projectInfo {
             // Add a new project.
             let newIndexPath = NSIndexPath(forRow: projects.count, inSection: 0)
             projects.append(projectInfo)
