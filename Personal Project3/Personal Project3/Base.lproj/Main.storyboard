@@ -453,6 +453,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="countdown" destination="YU5-06-EhR" id="bVY-Ry-VG5"/>
+                        <outlet property="createButton" destination="tZc-oa-t4I" id="aEb-lE-Sev"/>
                         <outlet property="duedate" destination="reB-vK-dBW" id="i7B-MJ-eCW"/>
                         <outlet property="startdate" destination="Esa-Ta-zel" id="gCK-Ei-d97"/>
                         <outlet property="textField" destination="nYQ-s4-dQb" id="N06-Cw-wvI"/>

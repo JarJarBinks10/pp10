@@ -14,6 +14,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var startdate: UIDatePicker!
     @IBOutlet weak var duedate: UIDatePicker!
+    @IBOutlet weak var createButton: UIBarButtonItem!
 
     var projectInfo: ProjectInfo?
 
@@ -54,7 +55,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
 
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "createButton") {
+        if createButton === sender {
             let name = textField.text ?? ""
             let startDate = startdate.date
             let endDate = duedate.date
