@@ -55,7 +55,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    // Text Feild Delegate
+    // Text Field Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
