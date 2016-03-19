@@ -19,8 +19,6 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     var projectInfo: ProjectInfo?
 
     @IBAction func calculateProjectDuration(sender: AnyObject) {
-        print("startdate = \(startdate.date)")
-        print("duedate = \(duedate.date)")
         var seconds:Int = Int(duedate.date.timeIntervalSinceDate(startdate.date))
         var minutes:Int = seconds/60
         seconds = seconds%60
@@ -28,10 +26,6 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         minutes = minutes%60
         let days:Int = hours/24
         hours = hours%24
-        print("days = \(days)")
-        print("hours = \(hours)")
-        print("minutes = \(minutes)")
-        print("seconds = \(seconds)")
         var datestring = String(days) + ":"
         datestring = datestring + String(hours)
         datestring = datestring + ":"
@@ -39,8 +33,6 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         datestring = datestring + ":"
         datestring = datestring + String(seconds)
         countdown.text = datestring
-        print(textField.text)
-        
     }
     
     override func viewDidLoad() {

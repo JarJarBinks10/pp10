@@ -19,9 +19,6 @@ class ProjectTableviewController: UITableViewController {
 
     // MARK: Properties
     var projects = [ProjectInfo]()
-    //@IBOutlet weak var labelPassedData: UILabel!
-    
-    var toPass: String!
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -47,17 +44,8 @@ class ProjectTableviewController: UITableViewController {
 
         // Load the sample data.
         loadSampleProjects()
-
-        //labelPassedData.text = toPass
         
-        print("List of all projects:")
-        for proj in projects {
-            print("name=\(proj.name)")
-            print("startdate=\(proj.startDate)")
-            print("enddate=\(proj.endDate)")
-        }
-        
-        // Do any additional setup after loading the view.
+       // Do any additional setup after loading the view.
     }
 
     func loadSampleProjects () {
