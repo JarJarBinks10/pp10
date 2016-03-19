@@ -51,9 +51,14 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueTest") {
+
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "createButton") {
+            let name = textField.text ?? ""
+            let startDate = startdate.date
+            let endDate = duedate.date
+            projectInfo = ProjectInfo(name: name, startDate: startDate, endDate: endDate)
             //let newproject = ProjectInfo(name: textField.text!, startDate: startdate.date, endDate: duedate.date)
             //projectlist.append (newproject)
             //let svc = segue.destinationViewController as! ProjectTableviewController
@@ -62,7 +67,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
             //svc.endDate = duedate.date
         }
     }
-    
+
     // Text Feild Delegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

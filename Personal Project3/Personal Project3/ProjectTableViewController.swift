@@ -79,7 +79,15 @@ class ProjectTableviewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    @IBAction func unwindToProjectList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? ProjectViewController, projectInfo = sourceViewController.projectInfo {
+            // Add a new project.
+            let newIndexPath = NSIndexPath(forRow: projects.count, inSection: 0)
+            projects.append(projectInfo)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
     /*
     // MARK: - Navigation
