@@ -19,7 +19,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     var projectInfo: ProjectInfo?
 
     func updateTotalDaysLabel() {
-        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " Days"
+        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " days allocated"
     }
 
     @IBAction func startDateChanged(sender: UIDatePicker) {
@@ -36,6 +36,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         projectNameTextField.delegate = self
         // Enable the Create button only if the text field has a valid Project name.
         checkValidProjectName()
+        updateTotalDaysLabel()
     }
 
     override func didReceiveMemoryWarning() {
