@@ -371,14 +371,14 @@
                                 <segue destination="kg7-B2-z3v" kind="show" id="G0g-9B-bVh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="tZc-oa-t4I">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tZc-oa-t4I">
                             <connections>
                                 <segue destination="cDZ-ym-bcT" kind="unwind" unwindAction="unwindToProjectList:" id="4eW-hj-MDh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="createButton" destination="tZc-oa-t4I" id="aEb-lE-Sev"/>
+                        <outlet property="saveButton" destination="tZc-oa-t4I" id="aEb-lE-Sev"/>
                         <outlet property="dueDatePicker" destination="reB-vK-dBW" id="i7B-MJ-eCW"/>
                         <outlet property="projectNameTextField" destination="nYQ-s4-dQb" id="N06-Cw-wvI"/>
                         <outlet property="startDatePicker" destination="Esa-Ta-zel" id="gCK-Ei-d97"/>

@@ -14,7 +14,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var totalDaysLabel: UILabel!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
-    @IBOutlet weak var createButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
 
     var projectInfo: ProjectInfo?
 
@@ -32,9 +32,15 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Handle the text field's user input through delegate callbacks.
+        // Handle the text field's user input via delegate callbacks.
         projectNameTextField.delegate = self
-        // Enable the Create button only if the text field has a valid Project name.
+        if let projectInfo = projectInfo {
+            navigationItem.title        = projectInfo.name
+            projectNameTextField.text   = projectInfo.name
+            startDatePicker.date        = projectInfo.startDate
+            dueDatePicker.date          = projectInfo.dueDate
+        }
+        // Enable the Save button only if the text field has a valid Project name.
         checkValidProjectName()
         updateTotalDaysLabel()
     }
@@ -46,7 +52,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
 
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if createButton === sender {
+        if saveButton === sender {
             //let name = projectNameTextField.text ?? ""
             projectInfo = ProjectInfo(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
         }
@@ -59,8 +65,8 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldDidBeginEditing(textField: UITextField) {
-        // Disable the Create button while editing.
-        createButton.enabled = false
+        // Disable the Save button while editing.
+        saveButton.enabled = false
     }
 
     func textFieldDidEndEditing(textField: UITextField) {
@@ -69,9 +75,9 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     }
 
     func checkValidProjectName() {
-        // Disable the Create button if the text field is empty.
+        // Disable the Save button if the text field is empty.
         let text = projectNameTextField.text ?? ""
-        createButton.enabled = !text.isEmpty
+        saveButton.enabled = !text.isEmpty
     }
 
 }

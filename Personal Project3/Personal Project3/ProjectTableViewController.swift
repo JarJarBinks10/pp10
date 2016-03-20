@@ -63,10 +63,30 @@ class ProjectTableviewController: UITableViewController {
 
     @IBAction func unwindToProjectList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? ProjectViewController, projectInfo = sourceViewController.projectInfo {
-            // Add a new project.
-            let newIndexPath = NSIndexPath(forRow: projects.count, inSection: 0)
-            projects.append(projectInfo)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing project.
+                projects[selectedIndexPath.row] = projectInfo
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            } else {
+                // Add a new project.
+                let newIndexPath = NSIndexPath(forRow: projects.count, inSection: 0)
+                projects.append(projectInfo)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetail" {
+            let projectDetailViewController = segue.destinationViewController as! ProjectViewController
+            // Get the cell that generated this segue.
+            if let selectedProjectCell = sender as? ProjectTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedProjectCell)!
+                let selectedProject = projects[indexPath.row]
+                projectDetailViewController.projectInfo = selectedProject
+            }
+        } else if segue.identifier == "AddItem" {
+            print("Adding new project.")
         }
     }
 
