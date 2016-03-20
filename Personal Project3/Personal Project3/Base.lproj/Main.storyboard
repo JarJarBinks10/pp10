@@ -45,26 +45,32 @@
         <scene sceneID="u1d-Ab-QMG">
             <objects>
                 <tableViewController id="Bno-Ff-SsQ" customClass="ProjectTableviewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRc-EO-uDh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRc-EO-uDh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectTableViewCell" id="kRg-qx-bn6" customClass="ProjectTableViewCell" customModule="Personal_Project3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectTableViewCell" rowHeight="94" id="kRg-qx-bn6" customClass="ProjectTableViewCell" customModule="Personal_Project3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRg-qx-bn6" id="TBp-mq-Lry">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2f-U5-yS5">
-                                            <rect key="frame" x="8" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="8" y="0.0" width="584" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efL-C2-onF" userLabel="Remaining Time Label">
-                                            <rect key="frame" x="256" y="0.0" width="240" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efL-C2-onF" userLabel="Total Days Label">
+                                            <rect key="frame" x="8" y="49" width="255" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqW-Zd-DAa" userLabel="Remaining Days Label">
+                                            <rect key="frame" x="271" y="49" width="255" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -73,6 +79,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="O2f-U5-yS5" id="mqT-S8-tVq"/>
+                                    <outlet property="remainingDaysLabel" destination="nqW-Zd-DAa" id="KaV-fr-QAe"/>
                                     <outlet property="totalDaysLabel" destination="efL-C2-onF" id="ApY-dK-65M"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="mhX-6m-Cfp"/>
                                 </connections>
@@ -378,9 +385,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButton" destination="tZc-oa-t4I" id="aEb-lE-Sev"/>
                         <outlet property="dueDatePicker" destination="reB-vK-dBW" id="i7B-MJ-eCW"/>
                         <outlet property="projectNameTextField" destination="nYQ-s4-dQb" id="N06-Cw-wvI"/>
+                        <outlet property="saveButton" destination="tZc-oa-t4I" id="aEb-lE-Sev"/>
                         <outlet property="startDatePicker" destination="Esa-Ta-zel" id="gCK-Ei-d97"/>
                         <outlet property="totalDaysLabel" destination="YU5-06-EhR" id="bVY-Ry-VG5"/>
                     </connections>

@@ -19,7 +19,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     var project: Project?
 
     func updateTotalDaysLabel() {
-        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " days allocated"
+        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " total days"
     }
 
     @IBAction func startDateChanged(sender: UIDatePicker) {
