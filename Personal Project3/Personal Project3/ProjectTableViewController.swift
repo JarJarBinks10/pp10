@@ -57,25 +57,7 @@ class ProjectTableviewController: UITableViewController {
         // Load any saved projects, otherwise load sample data.
         if let savedProjects = loadProjects() {
             projects += savedProjects
-        } else {
-            // Load the sample data.
-            loadSampleProjects()
         }
-    }
-
-    func loadSampleProjects () {
-        let dateformatter = NSDateFormatter()
-        dateformatter.dateFormat = "yyyy-MM-dd"
-        let startDate1 = dateformatter.dateFromString("2016-03-01")!
-        let dueDate1 = dateformatter.dateFromString("2016-04-03")!
-        let project1 = ProjectInfo (name: "Read all Marvel comic books.", startDate: startDate1, dueDate: dueDate1)!
-        let startDate2 = dateformatter.dateFromString("2016-04-07")!
-        let dueDate2 = dateformatter.dateFromString("2016-05-09")!
-        let project2 = ProjectInfo (name: "Read all DC comic books.", startDate: startDate2, dueDate: dueDate2)!
-        let startDate3 = dateformatter.dateFromString("2016-06-01")!
-        let dueDate3 = dateformatter.dateFromString("2016-06-05")!
-        let project3 = ProjectInfo (name: "Watch all superhero movies.", startDate: startDate3, dueDate: dueDate3)!
-        projects += [project1, project2, project3]
     }
 
     override func didReceiveMemoryWarning() {
