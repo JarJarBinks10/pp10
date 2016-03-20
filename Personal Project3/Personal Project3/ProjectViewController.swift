@@ -25,7 +25,10 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Handle the text field's user input through delegate callbacks.
+        projectNameTextField.delegate = self
+        // Enable the Create button only if the text field has a valid Project name.
+        checkValidProjectName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +47,23 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     // Text Field Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return true
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        // Disable the Create button while editing.
+        createButton.enabled = false
+    }
+
+    func textFieldDidEndEditing(textField: UITextField) {
+        checkValidProjectName()
+        navigationItem.title = textField.text
+    }
+
+    func checkValidProjectName() {
+        // Disable the Create button if the text field is empty.
+        let text = projectNameTextField.text ?? ""
+        createButton.enabled = !text.isEmpty
     }
 
 }
