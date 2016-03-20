@@ -28,7 +28,7 @@ class ProjectTableviewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let project = projects[indexPath.row]
         cell.nameLabel.text = project.name
-        cell.remainingTimeLabel.text = String(format: "%f", project.dueDate.timeIntervalSinceNow / 60 / 60 / 24)
+        cell.totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: project.startDate, toDate: project.dueDate, options: NSCalendarOptions()).day) + " days"
         return cell
     }
 

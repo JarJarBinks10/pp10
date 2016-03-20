@@ -12,7 +12,7 @@ class ProjectTableViewCell: UITableViewCell {
 
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var remainingTimeLabel: UILabel!
+    @IBOutlet weak var totalDaysLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

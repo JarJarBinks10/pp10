@@ -73,7 +73,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="O2f-U5-yS5" id="mqT-S8-tVq"/>
-                                    <outlet property="remainingTimeLabel" destination="efL-C2-onF" id="ApY-dK-65M"/>
+                                    <outlet property="totalDaysLabel" destination="efL-C2-onF" id="ApY-dK-65M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
