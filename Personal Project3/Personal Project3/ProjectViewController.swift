@@ -18,9 +18,16 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
 
     var projectInfo: ProjectInfo?
 
-    @IBAction func calculateProjectDuration(sender: AnyObject) {
+    func updateTotalDaysLabel() {
         totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " Days"
+    }
 
+    @IBAction func startDateChanged(sender: UIDatePicker) {
+        updateTotalDaysLabel()
+    }
+
+    @IBAction func dueDateChanged(sender: UIDatePicker) {
+        updateTotalDaysLabel()
     }
 
     override func viewDidLoad() {
