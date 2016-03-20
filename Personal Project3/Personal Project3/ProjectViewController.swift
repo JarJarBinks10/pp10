@@ -16,7 +16,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
-    var projectInfo: ProjectInfo?
+    var project: Project?
 
     func updateTotalDaysLabel() {
         totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " days allocated"
@@ -34,11 +34,11 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Handle the text field's user input via delegate callbacks.
         projectNameTextField.delegate = self
-        if let projectInfo = projectInfo {
-            navigationItem.title        = projectInfo.name
-            projectNameTextField.text   = projectInfo.name
-            startDatePicker.date        = projectInfo.startDate
-            dueDatePicker.date          = projectInfo.dueDate
+        if let project = project {
+            navigationItem.title        = project.name
+            projectNameTextField.text   = project.name
+            startDatePicker.date        = project.startDate
+            dueDatePicker.date          = project.dueDate
         }
         // Enable the Save button only if the text field has a valid Project name.
         checkValidProjectName()
@@ -54,7 +54,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
             //let name = projectNameTextField.text ?? ""
-            projectInfo = ProjectInfo(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
+            project = Project(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
         }
     }
 

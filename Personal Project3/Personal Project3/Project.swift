@@ -1,5 +1,5 @@
 //
-//  ProjectInfo.swift
+//  Project.swift
 //  Personal Project3
 //
 //  Created by Preeti Patel on 2015-12-31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProjectInfo: NSObject, NSCoding {
+class Project: NSObject, NSCoding {
 
     // MARK: Types
     struct PropertyKey {

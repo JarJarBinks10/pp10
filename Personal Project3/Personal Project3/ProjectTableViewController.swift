@@ -11,7 +11,7 @@ import UIKit
 class ProjectTableviewController: UITableViewController {
 
     // MARK: Properties
-    var projects = [ProjectInfo]()
+    var projects = [Project]()
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -57,6 +57,8 @@ class ProjectTableviewController: UITableViewController {
         // Load any saved projects, otherwise load sample data.
         if let savedProjects = loadProjects() {
             projects += savedProjects
+        } else {
+            print("No saved projects found.")
         }
     }
 
@@ -66,15 +68,15 @@ class ProjectTableviewController: UITableViewController {
     }
 
     @IBAction func unwindToProjectList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? ProjectViewController, projectInfo = sourceViewController.projectInfo {
+        if let sourceViewController = sender.sourceViewController as? ProjectViewController, project = sourceViewController.project {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing project.
-                projects[selectedIndexPath.row] = projectInfo
+                projects[selectedIndexPath.row] = project
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             } else {
                 // Add a new project.
                 let newIndexPath = NSIndexPath(forRow: projects.count, inSection: 0)
-                projects.append(projectInfo)
+                projects.append(project)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
             // Save the projects.
@@ -89,7 +91,7 @@ class ProjectTableviewController: UITableViewController {
             if let selectedProjectCell = sender as? ProjectTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedProjectCell)!
                 let selectedProject = projects[indexPath.row]
-                projectDetailViewController.projectInfo = selectedProject
+                projectDetailViewController.project = selectedProject
             }
         } else if segue.identifier == "AddItem" {
             print("Adding new project.")
@@ -98,14 +100,14 @@ class ProjectTableviewController: UITableViewController {
 
     // MARK: NSCoding
     func saveProjects() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: ProjectInfo.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: Project.ArchiveURL.path!)
         if !isSuccessfulSave {
             print("Failed to save meals...")
         }
     }
 
-    func loadProjects() -> [ProjectInfo]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(ProjectInfo.ArchiveURL.path!) as? [ProjectInfo]
+    func loadProjects() -> [Project]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Project.ArchiveURL.path!) as? [Project]
     }
 
 }

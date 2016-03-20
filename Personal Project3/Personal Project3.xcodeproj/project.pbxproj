@@ -15,8 +15,8 @@
 		1E7C0CD61BA5D231007E7290 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C0CD41BA5D231007E7290 /* LaunchScreen.xib */; };
 		1E7C0D8E1BA5FAF2007E7290 /* Load Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */; };
 		1E82E2BB1C2C48C000738153 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E2BA1C2C48C000738153 /* ProjectTableViewCell.swift */; };
-		1ECEAF6C1C35A1360009EEEF /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */; };
-		1ECEAF6D1C35A1360009EEEF /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */; };
+		1ECEAF6C1C35A1360009EEEF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* Project.swift */; };
+		1ECEAF6D1C35A1360009EEEF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* Project.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		1E7C0CE01BA5D231007E7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C0D8D1BA5FAF2007E7290 /* Load Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Load Project.swift"; sourceTree = "<group>"; };
 		1E82E2BA1C2C48C000738153 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; };
-		1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfo.swift; sourceTree = "<group>"; tabWidth = 4; };
+		1ECEAF6B1C35A1360009EEEF /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 				1E7C0CD21BA5D231007E7290 /* Images.xcassets */,
 				1E7C0CD41BA5D231007E7290 /* LaunchScreen.xib */,
 				1E7C0CC91BA5D231007E7290 /* Supporting Files */,
-				1ECEAF6B1C35A1360009EEEF /* ProjectInfo.swift */,
+				1ECEAF6B1C35A1360009EEEF /* Project.swift */,
 			);
 			path = "Personal Project3";
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 				1E7C0CCC1BA5D231007E7290 /* AppDelegate.swift in Sources */,
 				1E7C0D8E1BA5FAF2007E7290 /* Load Project.swift in Sources */,
 				1E69EB201BA6033E006EFEDC /* ProjectTableViewController.swift in Sources */,
-				1ECEAF6C1C35A1360009EEEF /* ProjectInfo.swift in Sources */,
+				1ECEAF6C1C35A1360009EEEF /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ECEAF6D1C35A1360009EEEF /* ProjectInfo.swift in Sources */,
+				1ECEAF6D1C35A1360009EEEF /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
