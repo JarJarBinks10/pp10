@@ -37,6 +37,7 @@ class ProjectTableviewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             projects.removeAtIndex(indexPath.row)
+            saveProjects()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -53,8 +54,13 @@ class ProjectTableviewController: UITableViewController {
         super.viewDidLoad()
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
-        // Load the sample data.
-        loadSampleProjects()
+        // Load any saved projects, otherwise load sample data.
+        if let savedProjects = loadProjects() {
+            projects += savedProjects
+        } else {
+            // Load the sample data.
+            loadSampleProjects()
+        }
     }
 
     func loadSampleProjects () {
@@ -89,6 +95,8 @@ class ProjectTableviewController: UITableViewController {
                 projects.append(projectInfo)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            // Save the projects.
+            saveProjects()
         }
     }
 
@@ -104,6 +112,18 @@ class ProjectTableviewController: UITableViewController {
         } else if segue.identifier == "AddItem" {
             print("Adding new project.")
         }
+    }
+
+    // MARK: NSCoding
+    func saveProjects() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: ProjectInfo.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+    }
+
+    func loadProjects() -> [ProjectInfo]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(ProjectInfo.ArchiveURL.path!) as? [ProjectInfo]
     }
 
 }
