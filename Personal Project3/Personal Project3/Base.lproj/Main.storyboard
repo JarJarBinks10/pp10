@@ -31,9 +31,6 @@
                                 <state key="normal" title="Load Project">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="bD1-mN-bcN" kind="show" id="5Lt-8F-Hrq"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,75 +40,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf3-db-DjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="266" y="-1647"/>
-        </scene>
-        <!--Projects-->
-        <scene sceneID="gYT-NX-Zye">
-            <objects>
-                <viewController id="QNs-MJ-a1r" customClass="UITableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6yD-uq-sfc"/>
-                        <viewControllerLayoutGuide type="bottom" id="tnf-Cb-QyJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zh5-mJ-AH5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-Df-k5C">
-                                <rect key="frame" x="0.0" y="160" width="600" height="440"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProjectTableViewCell" rowHeight="60" id="Kxu-Nm-jm1" customClass="ProjectTableViewCell" customModule="Personal_Project3">
-                                        <rect key="frame" x="0.0" y="86" width="600" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kxu-Nm-jm1" id="P1A-Aw-3mq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-ue-X2G">
-                                                    <rect key="frame" x="8" y="6" width="290" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-0q-eVt">
-                                                    <rect key="frame" x="302" y="6" width="290" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="projectLabel" destination="ieu-ue-X2G" id="gxH-Cg-C0c"/>
-                                            <outlet property="projectTime" destination="zhL-0q-eVt" id="heE-m8-6lO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9By-Hc-Hrm">
-                                <rect key="frame" x="20" y="20" width="560" height="132"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Projects" id="5jd-K5-5xf">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1RB-yg-vDa">
-                            <connections>
-                                <segue destination="oUn-l9-502" kind="show" id="Ln5-UB-awe"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="ben-H1-NTa"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="labelPassedData" destination="9By-Hc-Hrm" id="BdE-1r-Dhz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aN8-Qk-841" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1696" y="-815"/>
         </scene>
         <!--Your Projects-->
         <scene sceneID="u1d-Ab-QMG">
@@ -501,24 +429,6 @@
             </objects>
             <point key="canvasLocation" x="-742" y="-895"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="amo-ke-x5e">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bD1-mN-bcN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ykX-wq-VWR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="QNs-MJ-a1r" kind="relationship" relationship="rootViewController" id="Rcq-cj-fhS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlh-qb-J8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2854" y="-901"/>
-        </scene>
         <!--Notes-->
         <scene sceneID="SIg-Kf-kvf">
             <objects>
@@ -758,9 +668,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VQC-YI-Qyj"/>
-        <segue reference="2fK-sY-WQW"/>
-        <segue reference="Ln5-UB-awe"/>
         <segue reference="GXo-xq-Ufi"/>
+        <segue reference="w3n-mV-1NK"/>
+        <segue reference="VQC-YI-Qyj"/>
     </inferredMetricsTieBreakers>
 </document>
