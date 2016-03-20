@@ -13,16 +13,16 @@ class ProjectInfo {
     // MARK: Properties
     var name: String
     var startDate: NSDate
-    var endDate: NSDate
+    var dueDate: NSDate
 
     // MARK: Initialization
-    init?(name: String, startDate: NSDate, endDate: NSDate) {
+    init?(name: String, startDate: NSDate, dueDate: NSDate) {
         // Initialize stored properties.
         self.name = name
         self.startDate = startDate
-        self.endDate = endDate
-        // Initialization should fail if there is no name or if endDate is before startDate.
-        if name.isEmpty || startDate.compare(endDate) != .OrderedAscending {
+        self.dueDate = dueDate
+        // Initialization should fail if there is no name or if dueDate is before startDate.
+        if name.isEmpty || startDate.compare(dueDate) != .OrderedAscending {
             return nil
         }
     }

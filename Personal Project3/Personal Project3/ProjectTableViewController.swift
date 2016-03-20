@@ -28,7 +28,7 @@ class ProjectTableviewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let project = projects[indexPath.row]
         cell.nameLabel.text = project.name
-        cell.remainingTimeLabel.text = String(format: "%f", project.endDate.timeIntervalSinceNow / 60 / 60 / 24)
+        cell.remainingTimeLabel.text = String(format: "%f", project.dueDate.timeIntervalSinceNow / 60 / 60 / 24)
         return cell
     }
 
@@ -44,15 +44,15 @@ class ProjectTableviewController: UITableViewController {
     func loadSampleProjects () {
         let dateformatter = NSDateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
-        let startdate1 = dateformatter.dateFromString("2016-03-01")!
-        let enddate1 = dateformatter.dateFromString("2016-04-03")!
-        let project1 = ProjectInfo (name: "Read all Marvel comic books.", startDate: startdate1, endDate: enddate1)!
-        let startdate2 = dateformatter.dateFromString("2016-04-07")!
-        let enddate2 = dateformatter.dateFromString("2016-05-09")!
-        let project2 = ProjectInfo (name: "Read all DC comic books.", startDate: startdate2, endDate: enddate2)!
-        let startdate3 = dateformatter.dateFromString("2016-06-01")!
-        let enddate3 = dateformatter.dateFromString("2016-06-05")!
-        let project3 = ProjectInfo (name: "Watch all superhero movies.", startDate: startdate3, endDate: enddate3)!
+        let startDate1 = dateformatter.dateFromString("2016-03-01")!
+        let dueDate1 = dateformatter.dateFromString("2016-04-03")!
+        let project1 = ProjectInfo (name: "Read all Marvel comic books.", startDate: startDate1, dueDate: dueDate1)!
+        let startDate2 = dateformatter.dateFromString("2016-04-07")!
+        let dueDate2 = dateformatter.dateFromString("2016-05-09")!
+        let project2 = ProjectInfo (name: "Read all DC comic books.", startDate: startDate2, dueDate: dueDate2)!
+        let startDate3 = dateformatter.dateFromString("2016-06-01")!
+        let dueDate3 = dateformatter.dateFromString("2016-06-05")!
+        let project3 = ProjectInfo (name: "Watch all superhero movies.", startDate: startDate3, dueDate: dueDate3)!
         projects += [project1, project2, project3]
     }
 

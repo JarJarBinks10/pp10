@@ -10,29 +10,17 @@ import UIKit
 
 class ProjectViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var countdown: UILabel!
-    @IBOutlet weak var startdate: UIDatePicker!
-    @IBOutlet weak var duedate: UIDatePicker!
+    @IBOutlet weak var projectNameTextField: UITextField!
+    @IBOutlet weak var totalDaysLabel: UILabel!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var createButton: UIBarButtonItem!
 
     var projectInfo: ProjectInfo?
 
     @IBAction func calculateProjectDuration(sender: AnyObject) {
-        var seconds:Int = Int(duedate.date.timeIntervalSinceDate(startdate.date))
-        var minutes:Int = seconds/60
-        seconds = seconds%60
-        var hours:Int = minutes/60
-        minutes = minutes%60
-        let days:Int = hours/24
-        hours = hours%24
-        var datestring = String(days) + ":"
-        datestring = datestring + String(hours)
-        datestring = datestring + ":"
-        datestring = datestring + String(minutes)
-        datestring = datestring + ":"
-        datestring = datestring + String(seconds)
-        countdown.text = datestring
+        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " Days"
+
     }
 
     override func viewDidLoad() {
@@ -48,10 +36,8 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if createButton === sender {
-            let name = textField.text ?? ""
-            let startDate = startdate.date
-            let endDate = duedate.date
-            projectInfo = ProjectInfo(name: name, startDate: startDate, endDate: endDate)
+            //let name = projectNameTextField.text ?? ""
+            projectInfo = ProjectInfo(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
         }
     }
 
