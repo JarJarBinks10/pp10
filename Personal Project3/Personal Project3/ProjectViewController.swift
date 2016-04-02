@@ -53,7 +53,6 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
-            //let name = projectNameTextField.text ?? ""
             project = Project(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
         }
     }
