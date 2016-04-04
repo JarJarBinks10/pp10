@@ -6,6 +6,7 @@
 //  Copyright © 2015 Nick Patel. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class Project: NSObject, NSCoding {
@@ -21,6 +22,7 @@ class Project: NSObject, NSCoding {
     var name: String
     var startDate: NSDate
     var dueDate: NSDate
+    var milestones = [Milestone]()
 
     // MARK: Archiving Paths
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
