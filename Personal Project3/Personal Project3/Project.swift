@@ -16,13 +16,14 @@ class Project: NSObject, NSCoding {
         static let nameKey = "name"
         static let startDateKey = "startDate"
         static let dueDateKey = "dueDate"
+        static let tasksKey = "tasks"
     }
 
     // MARK: Properties
     var name: String
     var startDate: NSDate
     var dueDate: NSDate
-    var milestones = [Milestone]()
+    var tasks = [Task]()
 
     // MARK: Archiving Paths
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -46,12 +47,14 @@ class Project: NSObject, NSCoding {
         aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
         aCoder.encodeObject(startDate, forKey: PropertyKey.startDateKey)
         aCoder.encodeObject(dueDate, forKey: PropertyKey.dueDateKey)
+        //aCoder.encodeObject(tasks, forKey: PropertyKey.tasksKey)
     }
 
     required convenience init?(coder aDecoder: NSCoder) {
         let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
         let startDate = aDecoder.decodeObjectForKey(PropertyKey.startDateKey) as! NSDate
         let dueDate = aDecoder.decodeObjectForKey(PropertyKey.dueDateKey) as! NSDate
+        //let tasks = aDecoder.decodeObjectForKey(PropertyKey.tasksKey) as! [Task]
         // Must call designated initializer
         self.init(name: name, startDate: startDate, dueDate: dueDate)
     }
