@@ -29,4 +29,8 @@ class Task: NSObject {
         }
     }
 
+    func addTask(name: String, startDate: NSDate, dueDate: NSDate) {
+        tasks.append(Task(name: name, startDate: startDate, dueDate: dueDate)!)
+    }
+
 }

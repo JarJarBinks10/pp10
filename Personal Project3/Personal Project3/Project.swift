@@ -42,6 +42,10 @@ class Project: NSObject, NSCoding {
         }
     }
 
+    func addTask(name: String, startDate: NSDate, dueDate: NSDate) {
+        tasks.append(Task(name: name, startDate: startDate, dueDate: dueDate)!)
+    }
+
     // MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
