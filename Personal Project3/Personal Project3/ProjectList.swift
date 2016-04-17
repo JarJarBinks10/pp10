@@ -55,9 +55,13 @@ class ProjectList {
         // 2. For all projects that haven't started yet, sort by start date (earliest to latest).
     }
 
+    // MARK: Archiving Paths
+    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("projects")
+
     // MARK: Save
     func save() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: Project.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: ArchiveURL.path!)
         if !isSuccessfulSave {
             print("Failed to save meals...")
         }
@@ -66,7 +70,7 @@ class ProjectList {
     // MARK: Load
     func load() {
         // Load any saved projects.
-        if let savedProjects = NSKeyedUnarchiver.unarchiveObjectWithFile(Project.ArchiveURL.path!) as? [Project] {
+        if let savedProjects = NSKeyedUnarchiver.unarchiveObjectWithFile(ArchiveURL.path!) as? [Project] {
             projects += savedProjects
         } else {
             print("No saved projects found.")

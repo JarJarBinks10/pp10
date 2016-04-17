@@ -27,10 +27,6 @@ class Project: NSObject, NSCoding {
     var notes: String
     var tasks = [Task]()
 
-    // MARK: Archiving Paths
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("projects")
-
     // MARK: Initialization
     init?(name: String, startDate: NSDate, dueDate: NSDate) {
         // Initialize stored properties.
