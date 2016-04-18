@@ -18,7 +18,6 @@
 		1E82E2BB1C2C48C000738153 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E2BA1C2C48C000738153 /* ProjectTableViewCell.swift */; };
 		1EAF219C1CB206BB00E94F09 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAF219B1CB206BB00E94F09 /* Task.swift */; };
 		1ECEAF6C1C35A1360009EEEF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* Project.swift */; };
-		1ECEAF6D1C35A1360009EEEF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEAF6B1C35A1360009EEEF /* Project.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ECEAF6D1C35A1360009EEEF /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
