@@ -11,15 +11,6 @@ import UIKit
 
 class Project: NSObject, NSCoding {
 
-    // MARK: Types
-    struct PropertyKey {
-        static let nameKey = "name"
-        static let startDateKey = "startDate"
-        static let dueDateKey = "dueDate"
-        static let notesKey = "notes"
-        static let tasksKey = "tasks"
-    }
-
     // MARK: Properties
     var name: String
     var startDate: NSDate
@@ -56,19 +47,19 @@ class Project: NSObject, NSCoding {
 
     // MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
-        aCoder.encodeObject(startDate, forKey: PropertyKey.startDateKey)
-        aCoder.encodeObject(dueDate, forKey: PropertyKey.dueDateKey)
-        aCoder.encodeObject(notes, forKey: PropertyKey.notesKey)
-        //aCoder.encodeObject(tasks, forKey: PropertyKey.tasksKey)
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(startDate, forKey: "startDate")
+        aCoder.encodeObject(dueDate, forKey: "dueDate")
+        aCoder.encodeObject(notes, forKey: "notes")
+        //aCoder.encodeObject(tasks, forKey: "tasks")
     }
 
     required convenience init?(coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
-        let startDate = aDecoder.decodeObjectForKey(PropertyKey.startDateKey) as! NSDate
-        let dueDate = aDecoder.decodeObjectForKey(PropertyKey.dueDateKey) as! NSDate
-        let notes = aDecoder.decodeObjectForKey(PropertyKey.notesKey) as! String
-        //let tasks = aDecoder.decodeObjectForKey(PropertyKey.tasksKey) as! [Task]
+        let name = aDecoder.decodeObjectForKey("name") as! String
+        let startDate = aDecoder.decodeObjectForKey("startDate") as! NSDate
+        let dueDate = aDecoder.decodeObjectForKey("dueDate") as! NSDate
+        let notes = aDecoder.decodeObjectForKey("notes") as! String
+        //let tasks = aDecoder.decodeObjectForKey("tasks") as! [Task]
         // Must call designated initializer
         self.init(name: name, startDate: startDate, dueDate: dueDate, notes: notes)
     }
