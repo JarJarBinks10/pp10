@@ -51,7 +51,7 @@ class Project: NSObject, NSCoding {
         aCoder.encodeObject(startDate, forKey: "startDate")
         aCoder.encodeObject(dueDate, forKey: "dueDate")
         aCoder.encodeObject(notes, forKey: "notes")
-        //aCoder.encodeObject(tasks, forKey: "tasks")
+        aCoder.encodeObject(tasks, forKey: "tasks")
     }
 
     required convenience init?(coder aDecoder: NSCoder) {
@@ -59,9 +59,11 @@ class Project: NSObject, NSCoding {
         let startDate = aDecoder.decodeObjectForKey("startDate") as! NSDate
         let dueDate = aDecoder.decodeObjectForKey("dueDate") as! NSDate
         let notes = aDecoder.decodeObjectForKey("notes") as! String
-        //let tasks = aDecoder.decodeObjectForKey("tasks") as! [Task]
         // Must call designated initializer
         self.init(name: name, startDate: startDate, dueDate: dueDate, notes: notes)
+        if let savedTasks = aDecoder.decodeObjectForKey("tasks") as? [Task] {
+            tasks += savedTasks
+        }
     }
 
 }
