@@ -56,8 +56,7 @@ class ProjectList {
     }
 
     // MARK: Archiving Paths
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("projects")
+    let ArchiveURL = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!.URLByAppendingPathComponent("projects")
 
     // MARK: Save
     func save() {
