@@ -23,7 +23,7 @@ class ProjectTableviewController: UITableViewController {
         let cellIdentifier = "ProjectTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ProjectTableViewCell
         // Fetches the appropriate meal for the data source layout.
-        let project = projectList.get(indexPath.row)
+        let project = projectList.getProject(indexPath.row)
         cell.nameLabel.text = project.name
         cell.totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: project.startDate, toDate: project.dueDate, options: NSCalendarOptions()).day) + " total days"
         let now = NSDate()
@@ -80,7 +80,7 @@ class ProjectTableviewController: UITableViewController {
             // Get the cell that generated this segue.
             if let selectedProjectCell = sender as? ProjectTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedProjectCell)!
-                projectDetailViewController.project = projectList.get(indexPath.row)
+                projectDetailViewController.project = projectList.getProject(indexPath.row)
             }
         } else if segue.identifier == "AddItem" {
             print("Adding new project.")

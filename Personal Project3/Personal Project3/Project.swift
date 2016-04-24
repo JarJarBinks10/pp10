@@ -16,25 +16,21 @@ class Project: NSObject, NSCoding {
     var startDate: NSDate
     var dueDate: NSDate
     var notes: String
-    var tasks = [Task]()
+    var tasks = NSMutableArray()
 
     // MARK: Initialization
-    init?(name: String, startDate: NSDate, dueDate: NSDate) {
-        // Initialize stored properties.
-        self.name = name
-        self.startDate = startDate
-        self.dueDate = dueDate
-        self.notes = ""
-        super.init()
+    init?(name: String, startDate: NSDate, dueDate: NSDate, notes: String = "", tasks: NSMutableArray = NSMutableArray()) {
         // Initialization should fail if there is no name or if dueDate is before startDate.
         if name.isEmpty || startDate.compare(dueDate) != .OrderedAscending {
             return nil
         }
-    }
-
-    convenience init?(name: String, startDate: NSDate, dueDate: NSDate, notes: String) {
-        self.init(name: name, startDate: startDate, dueDate: dueDate)
+        // Initialize stored properties.
+        self.name = name
+        self.startDate = startDate
+        self.dueDate = dueDate
         self.notes = notes
+        self.tasks = tasks
+        super.init()
     }
 
     func updateNotes(notes: String) {
@@ -42,7 +38,33 @@ class Project: NSObject, NSCoding {
     }
 
     func addTask(name: String, startDate: NSDate, dueDate: NSDate) {
-        tasks.append(Task(name: name, startDate: startDate, dueDate: dueDate)!)
+        if let newTask = Task(name: name, startDate: startDate, dueDate: dueDate) {
+            tasks.addObject(newTask)
+            sortTasks()
+        }
+    }
+
+    func removeTask(index: Int) {
+        tasks.removeObjectAtIndex(index)
+    }
+
+    func updateTask(index: Int, task: Task) {
+        tasks[index] = task;
+        sortTasks()
+    }
+
+    func getTask(index: Int) -> Task {
+        return tasks[index] as! Task
+    }
+
+    func countTasks() -> Int {
+        return tasks.count
+    }
+
+    func sortTasks() {
+        // Sort in this order:
+        // 1. For all tasks that have already started, sort by due date (earliest to latest).
+        // 2. For all tasks that haven't started yet, sort by start date (earliest to latest).
     }
 
     // MARK: NSCoding
@@ -59,11 +81,8 @@ class Project: NSObject, NSCoding {
         let startDate = aDecoder.decodeObjectForKey("startDate") as! NSDate
         let dueDate = aDecoder.decodeObjectForKey("dueDate") as! NSDate
         let notes = aDecoder.decodeObjectForKey("notes") as! String
-        // Must call designated initializer
-        self.init(name: name, startDate: startDate, dueDate: dueDate, notes: notes)
-        if let savedTasks = aDecoder.decodeObjectForKey("tasks") as? [Task] {
-            tasks += savedTasks
-        }
+        let tasks = aDecoder.decodeObjectForKey("tasks") as! NSMutableArray
+        self.init(name: name, startDate: startDate, dueDate: dueDate, notes: notes, tasks: tasks)
     }
 
 }
