@@ -20,16 +20,14 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
 
     func updateTotalDaysLabel() {
-        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: cal!.startOfDayForDate(startDatePicker.date), toDate: cal!.startOfDayForDate(dueDatePicker.date), options: NSCalendarOptions()).day) + " total days"
+        totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: startDatePicker.date, toDate: dueDatePicker.date, options: NSCalendarOptions()).day) + " total days"
     }
 
     @IBAction func startDateChanged(sender: UIDatePicker) {
-        startDatePicker.date = cal!.startOfDayForDate(sender.date)
         updateTotalDaysLabel()
     }
 
     @IBAction func dueDateChanged(sender: UIDatePicker) {
-        dueDatePicker.date = cal!.startOfDayForDate(sender.date)
         updateTotalDaysLabel()
     }
 
@@ -40,8 +38,11 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
         if let project = project {
             navigationItem.title        = project.name
             projectNameTextField.text   = project.name
-            startDatePicker.date        = cal!.startOfDayForDate(project.startDate)
-            dueDatePicker.date          = cal!.startOfDayForDate(project.dueDate)
+            startDatePicker.date        = project.startDate
+            dueDatePicker.date          = project.dueDate
+        } else {
+            startDatePicker.date        = cal!.startOfDayForDate(startDatePicker.date)
+            dueDatePicker.date          = cal!.startOfDayForDate(dueDatePicker.date)
         }
         // Enable the Save button only if the text field has a valid Project name.
         checkValidProjectName()
@@ -56,7 +57,7 @@ class ProjectViewController: UIViewController, UITextFieldDelegate {
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
-            project = Project(name: projectNameTextField.text!, startDate: cal!.startOfDayForDate(startDatePicker.date), dueDate: cal!.startOfDayForDate(dueDatePicker.date))
+            project = Project(name: projectNameTextField.text!, startDate: startDatePicker.date, dueDate: dueDatePicker.date)
         }
     }
 
