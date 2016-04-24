@@ -50,9 +50,7 @@ class ProjectList {
 
     // MARK: Sort Entries
     func sort() {
-        // Sort in this order:
-        // 1. For all projects that have already started, sort by due date (earliest to latest).
-        // 2. For all projects that haven't started yet, sort by start date (earliest to latest).
+        projects.sortUsingFunction(compareProjects, context: UnsafeMutablePointer<Void>(bitPattern: 0))
     }
 
     // MARK: Archiving Paths
