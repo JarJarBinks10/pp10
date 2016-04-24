@@ -9,6 +9,48 @@
 import Foundation
 import UIKit
 
+func compareProjects(firstObject: AnyObject, secondObject: AnyObject, context: UnsafeMutablePointer<Void>) -> Int {
+    let now = NSDate()
+    var projects = [firstObject as! Project,
+                    secondObject as! Project]
+    var startDates = [projects[0].startDate,
+                      projects[1].startDate]
+    var dueDates = [projects[0].dueDate,
+                    projects[1].dueDate]
+    var projectsStarted = [projects[0].startDate.compare(now) == .OrderedAscending,
+                           projects[1].startDate.compare(now) == .OrderedAscending]
+    var order: NSComparisonResult
+    if projectsStarted[0] &&
+        projectsStarted[1] {
+        // Both projects (should) have already started, sort by due dates.
+        order = dueDates[0].compare(dueDates[1])
+        if order == .OrderedSame {
+            // If the due dates are identical, sort by the start date.
+            order = startDates[0].compare(startDates[1])
+        }
+    } else if projectsStarted[0] && !projectsStarted[1] {
+        // First project has started but second hasn't.
+        order = .OrderedAscending
+    } else if !projectsStarted[0] && projectsStarted[0] {
+        // First project hasn't started but second has.
+        order = .OrderedDescending
+    } else {
+        // Neither project has started, sort by start dates.
+        order = startDates[0].compare(startDates[1])
+        if order == .OrderedSame {
+            // If the start dates are identical, sort by the due date.
+            order = dueDates[0].compare(dueDates[1])
+        }
+    }
+    if order == .OrderedAscending {
+        return -1
+    } else if order == .OrderedDescending {
+        return 1
+    } else {
+        return 0
+    }
+}
+
 class Project: NSObject, NSCoding {
 
     // MARK: Properties
@@ -62,9 +104,7 @@ class Project: NSObject, NSCoding {
     }
 
     func sortTasks() {
-        // Sort in this order:
-        // 1. For all tasks that have already started, sort by due date (earliest to latest).
-        // 2. For all tasks that haven't started yet, sort by start date (earliest to latest).
+        tasks.sortUsingFunction(compareTasks, context: UnsafeMutablePointer<Void>(bitPattern: 0))
     }
 
     // MARK: NSCoding
