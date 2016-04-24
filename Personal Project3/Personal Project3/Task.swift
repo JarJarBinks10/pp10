@@ -14,7 +14,7 @@ class Task: NSObject {
     var name: String
     var startDate: NSDate
     var dueDate: NSDate
-    var tasks = [Task]()
+    var subTasks = NSMutableArray()
     
     // MARK: Initialization
     init?(name: String, startDate: NSDate, dueDate: NSDate) {
@@ -29,8 +29,32 @@ class Task: NSObject {
         }
     }
 
-    func addTask(task: Task) {
-        tasks.append(task)
+    func addSubTask(task: Task) {
+        subTasks.addObject(task)
+        sortSubTasks()
+    }
+
+    func removeSubTask(index: Int) {
+        subTasks.removeObjectAtIndex(index)
+    }
+
+    func updateSubTask(index: Int, task: Task) {
+        subTasks.replaceObjectAtIndex(index, withObject: task)
+        sortSubTasks()
+    }
+
+    func getSubTask(index: Int) -> Task {
+        return subTasks[index] as! Task
+    }
+
+    func count() -> Int {
+        return subTasks.count
+    }
+
+    func sortSubTasks() {
+        // Sort in this order:
+        // 1. For all tasks that have already started, sort by due date (earliest to latest).
+        // 2. For all tasks that haven't started yet, sort by start date (earliest to latest).
     }
 
 }

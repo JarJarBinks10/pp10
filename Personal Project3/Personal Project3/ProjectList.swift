@@ -11,7 +11,7 @@ import Foundation
 class ProjectList {
 
     // MARK: Properties
-    var projects = [Project]()
+    var projects = NSMutableArray()
 
     // MARK: Intitialization
     init() {
@@ -20,27 +20,27 @@ class ProjectList {
 
     // MARK: Add Project
     func add(project: Project) {
-        projects.append(project)
+        projects.addObject(project)
         sort()
         save()
     }
 
     // MARK: Remove Project
     func remove(index: Int) {
-        projects.removeAtIndex(index)
+        projects.removeObjectAtIndex(index)
         save()
     }
 
     // MARK: Update Project
     func update(index: Int, project: Project) {
-        projects[index] = project;
+        projects.replaceObjectAtIndex(index, withObject: project)
         sort()
         save()
     }
 
     // MARK: Get Project
-    func get(index: Int) -> Project {
-        return projects[index]
+    func getProject(index: Int) -> Project {
+        return projects[index] as! Project
     }
 
     // MARK: Indiciate the number of projects
@@ -60,19 +60,14 @@ class ProjectList {
 
     // MARK: Save
     func save() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(projects, toFile: ArchiveURL.path!)
-        if !isSuccessfulSave {
-            print("Failed to save meals...")
-        }
+        NSKeyedArchiver.archiveRootObject(projects, toFile: ArchiveURL.path!)
     }
 
     // MARK: Load
     func load() {
         // Load any saved projects.
-        if let savedProjects = NSKeyedUnarchiver.unarchiveObjectWithFile(ArchiveURL.path!) as? [Project] {
-            projects += savedProjects
-        } else {
-            print("No saved projects found.")
+        if let savedProjects = NSKeyedUnarchiver.unarchiveObjectWithFile(ArchiveURL.path!) as? NSMutableArray {
+            projects.addObjectsFromArray(savedProjects as [AnyObject])
         }
     }
     
