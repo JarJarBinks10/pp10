@@ -43,9 +43,9 @@ func compareProjects(firstObject: AnyObject, secondObject: AnyObject, context: U
         }
     }
     if order == .OrderedAscending {
-        return 1
-    } else if order == .OrderedDescending {
         return -1
+    } else if order == .OrderedDescending {
+        return 1
     } else {
         return 0
     }

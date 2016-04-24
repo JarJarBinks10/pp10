@@ -50,6 +50,7 @@ class ProjectTableviewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        projectList.sort()
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
     }
