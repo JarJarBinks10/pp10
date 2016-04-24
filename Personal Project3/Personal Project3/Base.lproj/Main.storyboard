@@ -65,45 +65,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUj-dL-W2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="-1093"/>
+            <point key="canvasLocation" x="341" y="-1349"/>
         </scene>
-        <!--Handy Dandy Notebook-->
-        <scene sceneID="Iuj-38-cyw">
-            <objects>
-                <tableViewController id="gpg-tv-2Dl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SXA-NJ-3oK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jf8-KH-Vu7">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jf8-KH-Vu7" id="xpY-RT-UGV">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gpg-tv-2Dl" id="zF6-AI-eyt"/>
-                            <outlet property="delegate" destination="gpg-tv-2Dl" id="1lE-a8-65p"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Handy Dandy Notebook" id="fti-bz-AIn">
-                        <barButtonItem key="leftBarButtonItem" title="Open" id="ufq-Fc-3DU"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FF1-T3-0dX">
-                            <connections>
-                                <segue destination="anC-UZ-FzN" kind="presentation" id="SQa-bD-5JQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kJP-YL-ezF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1243" y="-213"/>
-        </scene>
-        <!--New Note-->
+        <!--Notebook-->
         <scene sceneID="drP-RV-ZfQ">
             <objects>
                 <viewController id="rC8-8U-Gpd" sceneMemberID="viewController">
@@ -124,17 +88,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Note" id="OTQ-iL-syH">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="i8I-cK-QvC">
-                            <connections>
-                                <segue destination="gYU-58-qOA" kind="show" id="NX3-YN-5kM"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="qeZ-kE-4PP">
-                            <connections>
-                                <segue destination="gYU-58-qOA" kind="presentation" id="Uv5-mO-1Ge"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Notebook" id="OTQ-iL-syH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="i8I-cK-QvC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="qeZ-kE-4PP"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wC-cd-hW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -195,8 +151,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Project Set-Up" id="u80-yo-Oho">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uwt-hb-nRz"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tZc-oa-t4I"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uwt-hb-nRz">
+                            <connections>
+                                <segue destination="Ejs-Pp-xQ0" kind="presentation" id="14h-p0-dTs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tZc-oa-t4I">
+                            <connections>
+                                <segue destination="x2n-8m-3oO" kind="unwind" unwindAction="unwindToProjectList:" id="fF6-Cx-F8P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dueDatePicker" destination="reB-vK-dBW" id="i7B-MJ-eCW"/>
@@ -207,8 +171,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="x2n-8m-3oO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="-1255"/>
+            <point key="canvasLocation" x="2151" y="-1615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HXx-PF-1sI">
@@ -227,7 +192,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChP-UK-g4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-1367"/>
+            <point key="canvasLocation" x="1264" y="-1779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e89-EQ-8gm">
@@ -245,25 +210,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UA-rx-isQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230" y="-1031"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="R1d-nH-uxz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gYU-58-qOA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tvN-Oq-tsV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gpg-tv-2Dl" kind="relationship" relationship="rootViewController" id="9oj-6q-4fO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhZ-pG-bX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="457" y="-227"/>
+            <point key="canvasLocation" x="-427" y="-1095"/>
         </scene>
         <!--Countdown -->
         <scene sceneID="fRh-QG-41t">
@@ -494,7 +441,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NX3-YN-5kM"/>
         <segue reference="mhX-6m-Cfp"/>
     </inferredMetricsTieBreakers>
 </document>
