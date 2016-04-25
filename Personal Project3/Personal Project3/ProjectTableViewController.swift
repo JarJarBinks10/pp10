@@ -65,13 +65,13 @@ class ProjectTableviewController: UITableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing project.
                 projectList.update(selectedIndexPath.row, project: project)
-                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             } else {
                 // Add a new project.
                 let newIndexPath = NSIndexPath(forRow: projectList.count(), inSection: 0)
-                projectList.add(project)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+                projectList.add(project)
             }
+            tableView.reloadData()
         }
     }
 
