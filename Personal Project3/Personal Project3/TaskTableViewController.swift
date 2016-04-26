@@ -54,18 +54,18 @@ class TaskTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued a cell identifier.
-        let cellIdentifier = "TaskTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as TaskTableViewCell
+        _ = "TaskTableViewCell"
+        //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as TaskTableViewCell
         
         // Fetches the appropriate task for the data source layout
-        let meal = tasks[indexPath.row]
+        _ = tasks[indexPath.row]
         
-        cell.nameLabel.text = task.name
-        cell.startDateLabel.text = startDate.date
-        cell.enddateLabel.text = dueDate.date
+        //cell.nameLabel.text = task.name
+        //cell.startDateLabel.text = startDate.date
+        //cell.enddateLabel.text = dueDate.date
     
-        return cell
-    }
+        //return cell
+   // }
     
 
     /*
@@ -110,7 +110,5 @@ class TaskTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+    }*/
+};
