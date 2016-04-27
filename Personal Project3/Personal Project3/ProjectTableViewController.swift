@@ -22,7 +22,7 @@ class ProjectTableviewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "ProjectTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ProjectTableViewCell
-        // Fetches the appropriate meal for the data source layout.
+        // Fetches the appropriate project for the data source layout.
         let project = projectList.getProject(indexPath.row)
         cell.nameLabel.text = project.name
         cell.totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: project.startDate, toDate: project.dueDate, options: NSCalendarOptions()).day) + " total days"

@@ -53,19 +53,17 @@ class TaskTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // Table view cells are reused and should be dequeued a cell identifier.
-        _ = "TaskTableViewCell"
-        //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as TaskTableViewCell
-        
-        // Fetches the appropriate task for the data source layout
-        _ = tasks[indexPath.row]
-        
-        //cell.nameLabel.text = task.name
-        //cell.startDateLabel.text = startDate.date
-        //cell.enddateLabel.text = dueDate.date
-    
-        //return cell
-   // }
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "TaskTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TaskTableViewCell
+        // Fetches the appropriate project for the data source layout.
+        let task = taskList.getTask(indexPath.row)
+        cell.nameLabel.text = task.name
+        cell.totalDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: task.startDate, toDate: task.dueDate, options: NSCalendarOptions()).day) + " total days"
+        let now = NSDate()
+        cell.remainingDaysLabel.text = String(NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: now, toDate: task.dueDate, options: NSCalendarOptions()).day) + " days left"
+        return cell
+    }
     
 
     /*
@@ -110,5 +108,7 @@ class TaskTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }*/
-};
+    }
+    */
+    
+}

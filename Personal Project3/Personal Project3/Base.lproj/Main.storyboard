@@ -163,7 +163,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wC-cd-hW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EdG-gS-EZR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="-983"/>
+            <point key="canvasLocation" x="2238" y="-717"/>
         </scene>
         <!--Project Set-Up-->
         <scene sceneID="tne-QT-ifu">
@@ -311,13 +311,13 @@
         <!--Your Tasks-->
         <scene sceneID="h39-kA-XN1">
             <objects>
-                <tableViewController id="g8T-kC-M7J" customClass="ProjectTableviewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="g8T-kC-M7J" customClass="TaskTableViewController" customModule="Personal_Project3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" id="9rN-Dd-Z1K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectTableViewCell" rowHeight="94" id="mab-A6-oP3" customClass="ProjectTableViewCell" customModule="Personal_Project3" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectTableViewCell" rowHeight="94" id="mab-A6-oP3" userLabel="TaskTableViewCell" customClass="TaskTableViewCell" customModule="Personal_Project3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mab-A6-oP3" id="9CA-ZJ-Goz">
@@ -345,9 +345,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameLabel" destination="KsZ-do-ExK" id="hWf-wE-ers"/>
-                                    <outlet property="remainingDaysLabel" destination="Uq8-o4-omF" id="Ht2-gr-vs6"/>
-                                    <outlet property="totalDaysLabel" destination="fNh-Tn-ZfB" id="5cx-b0-d5h"/>
+                                    <outlet property="nameLabel" destination="9CA-ZJ-Goz" id="ueJ-XX-Iv2"/>
+                                    <outlet property="remainingDaysLabel" destination="Uq8-o4-omF" id="IuR-67-qbJ"/>
+                                    <outlet property="totalDaysLabel" destination="9CA-ZJ-Goz" id="DVS-vk-k6D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -363,7 +363,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vk8-hs-l1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4359" y="807"/>
+            <point key="canvasLocation" x="3145" y="71"/>
         </scene>
         <!--Task Set-Up-->
         <scene sceneID="gdQ-kX-7mi">
@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEf-f8-2OT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901" y="515"/>
+            <point key="canvasLocation" x="2983" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhU-jA-ug1">
