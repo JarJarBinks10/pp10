@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1E7C0CC51BA5D231007E7290"
                BuildableName = "Personal Project3.app"
                BlueprintName = "Personal Project3"
-               ReferencedContainer = "container:Personal Project3.xcodeproj">
+               ReferencedContainer = "container:Tic Toc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,16 +31,16 @@
                BlueprintIdentifier = "1E7C0CDA1BA5D231007E7290"
                BuildableName = "Personal Project3Tests.xctest"
                BlueprintName = "Personal Project3Tests"
-               ReferencedContainer = "container:Personal Project3.xcodeproj">
+               ReferencedContainer = "container:Tic Toc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "1E7C0CDA1BA5D231007E7290"
                BuildableName = "Personal Project3Tests.xctest"
                BlueprintName = "Personal Project3Tests"
-               ReferencedContainer = "container:Personal Project3.xcodeproj">
+               ReferencedContainer = "container:Tic Toc.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,18 +59,21 @@
             BlueprintIdentifier = "1E7C0CC51BA5D231007E7290"
             BuildableName = "Personal Project3.app"
             BlueprintName = "Personal Project3"
-            ReferencedContainer = "container:Personal Project3.xcodeproj">
+            ReferencedContainer = "container:Tic Toc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
@@ -79,17 +82,17 @@
             BlueprintIdentifier = "1E7C0CC51BA5D231007E7290"
             BuildableName = "Personal Project3.app"
             BlueprintName = "Personal Project3"
-            ReferencedContainer = "container:Personal Project3.xcodeproj">
+            ReferencedContainer = "container:Tic Toc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
@@ -98,7 +101,7 @@
             BlueprintIdentifier = "1E7C0CC51BA5D231007E7290"
             BuildableName = "Personal Project3.app"
             BlueprintName = "Personal Project3"
-            ReferencedContainer = "container:Personal Project3.xcodeproj">
+            ReferencedContainer = "container:Tic Toc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="anC-UZ-FzN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ejs-Pp-xQ0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,18 +26,30 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="0.0" width="391" height="44"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efL-C2-onF" userLabel="Total Days Label">
                                             <rect key="frame" x="8" y="49" width="255" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="49" width="360" height="44"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqW-Zd-DAa" userLabel="Remaining Days Label">
                                             <rect key="frame" x="271" y="49" width="255" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="271" y="49" width="129" height="44"/>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="382" y="48" width="415" height="44"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -65,66 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUj-dL-W2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="-1349"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="46I-Do-3jl">
-            <objects>
-                <viewController id="3j6-iA-KCA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S6L-63-3cS"/>
-                        <viewControllerLayoutGuide type="bottom" id="ha8-h4-h0g"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vhy-ii-03H">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DPi-mh-3D6">
-                                <rect key="frame" x="0.0" y="0.0" width="602" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qOr-tj-68L">
-                                        <rect key="frame" x="0.0" y="92" width="602" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qOr-tj-68L" id="gpl-ep-b2a">
-                                            <rect key="frame" x="0.0" y="0.0" width="602" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qfd-3z-svk">
-                                        <rect key="frame" x="0.0" y="136" width="602" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qfd-3z-svk" id="fes-T7-sgD">
-                                            <rect key="frame" x="0.0" y="0.0" width="602" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TJC-ee-M6b">
-                                        <rect key="frame" x="0.0" y="180" width="602" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJC-ee-M6b" id="cP3-ax-3bN">
-                                            <rect key="frame" x="0.0" y="0.0" width="602" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jCX-zK-zSU">
-                                        <rect key="frame" x="0.0" y="224" width="602" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCX-zK-zSU" id="BjJ-o6-GXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="602" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sPD-UP-wvX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i0X-si-p9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4358" y="-1119"/>
+            <point key="canvasLocation" x="340.5" y="-1349.25"/>
         </scene>
         <!--Notebook-->
         <scene sceneID="drP-RV-ZfQ">
@@ -163,7 +116,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wC-cd-hW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EdG-gS-EZR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="-717"/>
+            <point key="canvasLocation" x="74" y="521"/>
         </scene>
         <!--Project Set-Up-->
         <scene sceneID="tne-QT-ifu">
@@ -182,6 +135,12 @@
                                 <date key="date" timeIntervalSinceReferenceDate="463852130.70393598">
                                     <!--2015-09-13 15:48:50 +0000-->
                                 </date>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="465" width="399" height="162"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="396" width="802" height="230"/>
+                                </variation>
                                 <connections>
                                     <action selector="dueDateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fLS-HJ-2JN"/>
                                 </connections>
@@ -191,40 +150,65 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="130" width="51" height="21"/>
+                                </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYQ-s4-dQb" userLabel="Project Name Text Field">
-                                <rect key="frame" x="66" y="94" width="521" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rVY-4F-zig"/>
-                                </connections>
-                            </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-Ta-zel" userLabel="Start Date Picker">
                                 <rect key="frame" x="0.0" y="141" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="463852128.31856602">
                                     <!--2015-09-13 15:48:48 +0000-->
                                 </date>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="211" width="402" height="162"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="141" width="801" height="230"/>
+                                </variation>
                                 <connections>
                                     <action selector="startDateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="V76-wc-Thd"/>
                                 </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-Wn-qIf">
+                                <rect key="frame" x="14" y="562" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tasks"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="743" width="80" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="729" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="HFw-XH-4q2" kind="presentation" id="HqI-X2-sTQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYQ-s4-dQb" userLabel="Project Name Text Field">
+                                <rect key="frame" x="66" y="94" width="521" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="126" width="334" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="94" width="722" height="30"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rVY-4F-zig"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YU5-06-EhR" userLabel="Total Days Label">
                                 <rect key="frame" x="201" y="517" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="109" y="691" width="213" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="312" y="687" width="214" height="22"/>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-Wn-qIf">
-                                <rect key="frame" x="14" y="562" width="80" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Tasks"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKh-Yp-WoB">
-                                <rect key="frame" x="131" y="558" width="80" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Notes"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -251,7 +235,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="x2n-8m-3oO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="-1615"/>
+            <point key="canvasLocation" x="2151" y="-1615.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HXx-PF-1sI">
@@ -306,7 +290,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKD-BE-a1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-730"/>
+            <point key="canvasLocation" x="-744" y="598"/>
         </scene>
         <!--Your Tasks-->
         <scene sceneID="h39-kA-XN1">
@@ -329,18 +313,33 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="0.0" width="389" height="44"/>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="0.0" width="790" height="44"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNh-Tn-ZfB" userLabel="Total Days Label">
                                             <rect key="frame" x="8" y="49" width="255" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="49" width="360" height="44"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-o4-omF" userLabel="Remaining Days Label">
                                             <rect key="frame" x="271" y="49" width="255" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="271" y="49" width="131" height="44"/>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="371" y="46" width="430" height="44"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -348,6 +347,7 @@
                                     <outlet property="nameLabel" destination="9CA-ZJ-Goz" id="ueJ-XX-Iv2"/>
                                     <outlet property="remainingDaysLabel" destination="Uq8-o4-omF" id="IuR-67-qbJ"/>
                                     <outlet property="totalDaysLabel" destination="9CA-ZJ-Goz" id="DVS-vk-k6D"/>
+                                    <segue destination="4im-64-hh1" kind="showDetail" id="3FK-UA-j9U"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -356,14 +356,27 @@
                             <outlet property="delegate" destination="g8T-kC-M7J" id="qof-JB-XeQ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Cancel" id="pOG-bv-X2V">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="3r0-Js-WNe"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Your Tasks" id="l5Q-z6-kcI">
                         <barButtonItem key="leftBarButtonItem" id="5j7-bH-xmh"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4le-Ma-VHR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4le-Ma-VHR">
+                            <connections>
+                                <segue destination="y5U-Wf-Qqb" kind="presentation" id="hhc-nq-i8J"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vk8-hs-l1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="71"/>
+            <point key="canvasLocation" x="2655" y="-952.5"/>
         </scene>
         <!--Task Set-Up-->
         <scene sceneID="gdQ-kX-7mi">
@@ -377,15 +390,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-bn-6GS" userLabel="Due Date Picker">
-                                <rect key="frame" x="0.0" y="330" width="600" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="463852130.70393598">
-                                    <!--2015-09-13 15:48:50 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="dueDateChanged:" destination="4im-64-hh1" eventType="valueChanged" id="D2W-XE-CN2"/>
-                                </connections>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY3-JU-rax" userLabel="Name Label">
                                 <rect key="frame" x="7" y="98" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -396,6 +400,12 @@
                                 <rect key="frame" x="66" y="94" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="58" y="97" width="336" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="94" width="721" height="30"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="4im-64-hh1" id="Ha7-kL-St6"/>
                                 </connections>
@@ -405,23 +415,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="691" width="213" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="308" y="684" width="214" height="22"/>
+                                </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O9d-W2-8aY" userLabel="Start Date Picker">
                                 <rect key="frame" x="0.0" y="141" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="463852128.31856602">
                                     <!--2015-09-13 15:48:48 +0000-->
                                 </date>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-1" y="180" width="402" height="162"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="141" width="800" height="230"/>
+                                </variation>
                                 <connections>
                                     <action selector="startDateChanged:" destination="4im-64-hh1" eventType="valueChanged" id="gtA-ni-C75"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-bn-6GS" userLabel="Due Date Picker">
+                                <rect key="frame" x="0.0" y="330" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="463852130.70393598">
+                                    <!--2015-09-13 15:48:50 +0000-->
+                                </date>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-1" y="426" width="399" height="162"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-1" y="415" width="801" height="230"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dueDateChanged:" destination="4im-64-hh1" eventType="valueChanged" id="D2W-XE-CN2"/>
                                 </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Task Set-Up" id="Ngk-X1-h3n">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="l3X-Rx-XQX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xjd-hF-kpE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="l3X-Rx-XQX">
+                            <connections>
+                                <segue destination="HFw-XH-4q2" kind="presentation" id="YJ3-jX-jAD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xjd-hF-kpE">
+                            <connections>
+                                <segue destination="QRK-JH-YiC" kind="unwind" unwindAction="unwindToProjectList:" id="Dfp-yO-vl2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="dueDatePicker" destination="ujb-bn-6GS" id="42k-fj-r7z"/>
                         <outlet property="projectNameTextField" destination="1C5-cf-m6O" id="Erf-yP-K48"/>
@@ -431,8 +477,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEf-f8-2OT" sceneMemberID="firstResponder"/>
+                <exit id="QRK-JH-YiC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2983" y="319"/>
+            <point key="canvasLocation" x="2904" y="76.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhU-jA-ug1">
@@ -450,7 +497,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWe-Be-erD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="865"/>
+            <point key="canvasLocation" x="2003" y="281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="63D-gb-eYH">
@@ -468,28 +515,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5A3-Gs-3iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3693" y="209"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="IAN-fm-a0y">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WAZ-3m-gob" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKa-mw-OOR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3j6-iA-KCA" kind="relationship" relationship="rootViewController" id="VJm-fZ-DNf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fND-m7-ILN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3546" y="-1119"/>
+            <point key="canvasLocation" x="1533" y="-978"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mhX-6m-Cfp"/>
+        <segue reference="YJ3-jX-jAD"/>
+        <segue reference="3FK-UA-j9U"/>
     </inferredMetricsTieBreakers>
 </document>
