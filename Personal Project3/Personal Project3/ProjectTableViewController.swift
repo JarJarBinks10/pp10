@@ -68,8 +68,8 @@ class ProjectTableviewController: UITableViewController {
             } else {
                 // Add a new project.
                 let newIndexPath = NSIndexPath(forRow: projectList.count(), inSection: 0)
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
                 projectList.add(project)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
             tableView.reloadData()
         }
